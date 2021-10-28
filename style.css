@@ -1,0 +1,76 @@
+/*
+Rubrikfärg: #E7B917
+Bakgrund: #262937
+Text i korten: #000000
+Kortens bakgrund: #808FDF
+Korten, innehållets bakgrund: #EADBA8
+*/
+:root {
+	--primary-color: #E7B917;
+	--primary-background: #262937;
+	--card-text-color: #000000;
+	--card-background: #808fdf;
+	--card-content-background: #EADBA8;
+}
+body {
+	background-color: var(--primary-background);
+	margin: 0em;
+}
+
+header {
+	text-align: center;
+	padding: 1em;
+}
+
+h1 {
+	color: var(--primary-color);
+	font-size: 3em;
+	margin: 0em;
+	margin-bottom: 0.4em;
+	/* font-family: "Rokkitt"; */
+}
+
+.search-wrapper {
+	position: relative;
+}
+.search-wrapper > span {
+	position: absolute;
+	right: 0em;
+	pointer-events: none;
+}
+
+
+
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1em;
+	padding: 1em;
+}
+
+.card {
+	background-color: var(--card-background);
+	min-height: 15em;
+	display: flex;
+	flex-direction: column;
+}
+.card > h2 {
+	text-align: center;
+	padding: 0.5em;
+	margin: 0em;
+}
+.card > p {
+	background-color: var(--card-content-background);
+	padding: 1.5em;
+	flex-grow: 1;
+	margin: 0em;
+}
+
+/* CSS-enheter:
+em, rem - relativa enheter; bra till font-size (använd inte px till font-size)
+px - absolut enhet; px == pixel == bildpunkt
+%
+vh, vw
+(mindre vanliga enheter: in, cm, mm, pt)
+*/
